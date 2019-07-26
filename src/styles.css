@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css?family=Varela+Round&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  background: #00acdc;
+}
+
+.header {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-family: "Varela Round", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 250%;
+  color: #ffffff;
+  text-shadow: 0 2px 0 #adadad;
+}
+
+.customForm {
+  padding: 0 10px;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.inputStylized {
+  padding: 8px;
+  border-radius: 20px;
+  border: none;
+}
+
+.customButton {
+  all: unset;
+  background: #ffb400;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 20px;
+  padding: 5px 15px;
+}
+.customButton:disabled {
+  background: gainsboro;
+}
+
+.lyricsArea {
+  position: absolute;
+  background-color: #ffffff;
+
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+  padding: 10px;
+
+  height: calc(100vh - 240px);
+
+  overflow: auto;
+
+  border-radius: 4px 4px 0 0;
+}
+
+.lyricsText {
+  white-space: pre-wrap;
+  text-align: center;
+  overflow: auto;
+  color: #222222;
+}
+
+.center {
+  font-family: "Varela Round", sans-serif;
+  text-align: center;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* //==Media Querys==\\ */
+/*Tablet Devices, m*/
+
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  .customForm {
+    flex-direction: row;
+    height: fit-content;
+    padding: 10px;
+    width: 80%;
+  }
+
+  .lyricsArea {
+    height: calc(100vh - 130px);
+    width: 70vw;
+  }
+}
+
+/*Desktop Devices, l*/
+@media only screen and (min-width: 993px) {
+  .header {
+    height: 150px;
+  }
+
+  .customForm {
+    padding: 10px;
+    width: 50%;
+    flex-direction: row;
+    height: fit-content;
+  }
+
+  .lyricsArea {
+    height: calc(100vh - 150px);
+    width: 60vw;
+  }
+
+  .lyricsText {
+    font-size: 24px;
+  }
+
+  .title {
+    font-size: 68px;
+  }
+}
+
+/*Desktop Devices, xl*/
+@media only screen and (min-width: 1200px) {
+  .header {
+    height: 150px;
+  }
+
+  .customForm {
+    padding: 10px;
+    width: 40%;
+    flex-direction: row;
+    height: fit-content;
+  }
+
+  .lyricsArea {
+    height: calc(100vh - 150px);
+    width: 60vw;
+  }
+
+  .lyricsText {
+    font-size: 24px;
+  }
+
+  .title {
+    font-size: 64px;
+  }
+}
